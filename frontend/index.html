@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>File Sorter App</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h2>自動仕分けシステム</h2>
+        <p>指定フォルダ内のファイルを条件に応じて自動的に抽出・仕分けを実行する。</p>
+        <div id="manual">
+            <h2>このツールの使い方</h2>
+            <ol>
+                <li>ゴミ箱の中身を救出する時は、デスクトップの <b>recover.command</b> を実行してください。</li>
+                <li>「フォルダを選択」で整理したいフォルダを選んでください（一時避難先含む）。</li>
+                <li>「仕分けを実行する」ボタンを押すと、自動的にファイルが整理されます。</li>
+            </ol>
+        </div>
+     
+        <div class="input-container" style="margin-bottom: 20px;">
+            <select id="folder-path" style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #fff;">
+                <option value="" disabled selected>仕分けするターゲットフォルダを選択すること</option>
+                <option value="/Users/tsukegisatoshi/Desktop">デスクトップ</option>
+                <option value="/Users/tsukegisatoshi/Downloads">ダウンロード</option>
+                <option value="/Users/tsukegisatoshi/Documents">書類 (Documents)</option>
+                <option value="/Users/tsukegisatoshi/Music">ミュージック</option>
+                <option value="/Users/tsukegisatoshi/Pictures">ピクチャ</option>
+                <option value="/Users/tsukegisatoshi/Movies">ムービー</option>
+                <option value="/Users/tsukegisatoshi/.Trash">🗑️ ゴミ箱 (.Trash)</option>
+                <option value="---" disabled>----------------------------------------</option>
+                <option value="SELECT_MANUALLY">📁 任意のフォルダを直接選択する</option>
+            </select>
+        </div>
+        
+        <button id="start-btn">仕分けを実行する</button>
+
+        <div id="status-area">スタンバイ状態...</div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
