@@ -31,6 +31,8 @@ javac backend/sorter/*.java
 ```
 
 ### 2. アプリケーションの起動
+※前提条件: 動作にはJava (JDK) および Node.js がインストールされている必要があります。
+
 Electronを起動し、GUIを通じてファイル仕分け機能を開始します
 
 ```bash
